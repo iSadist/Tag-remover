@@ -8,11 +8,11 @@
 class TagRemover {
 
 public:
-	TagRemover(std::istream i_file);
-	void print(std::ostream o_file);
+	TagRemover(std::istream& i_file);
+	void print(std::ostream& o_file);
 
 private:
-	std::istream i_stream;
+	std::istream *i_stream_ptr;
 };
 
 #endif

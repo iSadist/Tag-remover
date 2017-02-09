@@ -3,10 +3,10 @@
 using namespace std;
 
 /*Constructor*/
-TagRemover::TagRemover(std::istream i_file){
-	i_stream = i_file;
+TagRemover::TagRemover(std::istream& i_stream){
+	i_stream_ptr = &i_stream;
 }
 
-void TagRemover::print(std::ostream o_file){
+void TagRemover::print(std::ostream& o_file){
 
 }
