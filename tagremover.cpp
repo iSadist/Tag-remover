@@ -15,6 +15,6 @@ TagRemover::TagRemover(std::istream& i_stream){
 	//Check match with regex and output
 }
 
-void TagRemover::print(std::ostream& o_file){
-
+void TagRemover::print(std::ostream& o_stream){
+	o_stream << "Testing OutFile" << endl;
 }
