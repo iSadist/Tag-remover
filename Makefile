@@ -14,8 +14,7 @@ CXXFLAGS += $(DEPFLAGS)
 LDFLAGS =   -g
 
 # Targets
-PROGS = html
-PROGS += spell
+PROGS = remove_tags
 
 all: $(PROGS)
 
