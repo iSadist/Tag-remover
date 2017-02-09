@@ -19,7 +19,7 @@ PROGS = remove_tags
 all: $(PROGS)
 
 # Targets rely on implicit rules for compiling and linking
-html: remove_tags.o tagremover.o
+remove_tags: remove_tags.o tagremover.o
 
 # Phony targets
 .PHONY: all clean
