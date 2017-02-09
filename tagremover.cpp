@@ -7,6 +7,6 @@ TagRemover::TagRemover(std::istream& i_stream){
 	i_stream_ptr = &i_stream;
 }
 
-void TagRemover::print(std::ostream& o_file){
-
+void TagRemover::print(std::ostream& o_stream){
+	o_stream << "Testing OutFile" << endl;
 }
