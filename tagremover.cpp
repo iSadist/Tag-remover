@@ -7,8 +7,6 @@ using namespace std;
 TagRemover::TagRemover(std::istream& i_stream){
 	i_stream_ptr = &i_stream;
 
-
-
 	std::string text;
 	regex tags("<[^\\<]*>");
 
@@ -16,5 +14,7 @@ TagRemover::TagRemover(std::istream& i_stream){
 }
 
 void TagRemover::print(std::ostream& o_stream){
-	o_stream << "Testing OutFile" << endl;
+	string temp;
+	*i_stream_ptr >> temp;
+	o_stream << "Testing OutFile " << temp << endl;
 }
