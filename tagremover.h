@@ -13,7 +13,6 @@ public:
 
 private:
 	std::istream *i_stream_ptr;
-
 };
 
 #endif

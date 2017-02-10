@@ -6,18 +6,15 @@ using namespace std;
 /*Constructor*/
 TagRemover::TagRemover(std::istream& i_stream){
 	i_stream_ptr = &i_stream;
-
-	std::string text;
-	regex tags("<[^\\<]*>");
-
-	//Check match with regex and output
 }
 
 void TagRemover::print(std::ostream& o_stream){
-	string temp;
+	string text;
 	char ch;
 	while ((*i_stream_ptr).get(ch)) {
-		temp += ch;
+		text += ch;
 	}
-	o_stream << temp << endl;
+	regex tag("(<[^\\<]*>)|(\\&)(lt|gt|nbsp|amp)");
+	text = regex_replace(text,tag," REMOVED ");
+	o_stream << text << endl;
 }
