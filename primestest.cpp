@@ -13,7 +13,5 @@ int main() {
   Primes test(100000);
   test.findInterval(2,100000);
   test.printHighest();
-
-
   return 0;
 }
