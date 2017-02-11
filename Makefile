@@ -14,13 +14,14 @@ CXXFLAGS += $(DEPFLAGS)
 LDFLAGS =   -g
 
 # Targets
-PROGS = remove_tags primestest
+PROGS = remove_tags primestest date_test
 
 all: $(PROGS)
 
 # Targets rely on implicit rules for compiling and linking
 remove_tags: remove_tags.o tagremover.o
 primestest: primestest.o primes.o
+date_test: date_test.o date.o 
 
 # Phony targets
 .PHONY: all clean
