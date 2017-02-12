@@ -10,8 +10,8 @@ int main() {
 
   Date today("2017-02-11");
 
-  while (cin >> today) {
-    std::cout << today << '\n';
+  while(cin >> today) {
+    std::cout << today;
   }
 
   return 0;
