@@ -14,7 +14,7 @@ CXXFLAGS += $(DEPFLAGS)
 LDFLAGS =   -g
 
 # Targets
-PROGS = remove_tags primestest date_test
+PROGS = remove_tags primestest date_test tostring_test
 
 all: $(PROGS)
 

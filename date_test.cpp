@@ -10,7 +10,7 @@ int main() {
 
 	Date today("2017-02-11");
 
-	while(cin >> today) {
+	while (cin >> today) {
 		std::cout << today;
 	}
 	cout << "\nProgram terminated (EOF reached or invalid date format input)" << endl;
