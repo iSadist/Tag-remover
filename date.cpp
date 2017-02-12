@@ -5,6 +5,7 @@
 using namespace std;
 
 Date::Date(std::string string) : date(string) {}
+Date::Date() {}
 
 istream& operator>>(istream& is, Date& d) {
 	regex date_format("^\\d{4}\\-\\d{2}\\-\\d{2}$");

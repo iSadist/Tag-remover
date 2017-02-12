@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include "date.h"
 
 using namespace std;
 
@@ -22,8 +23,6 @@ T string_cast(const string& in_str){
 	throw std::invalid_argument("Invalid argument");
 }
 
-
-
 int main() {
 	int a = 44;
 	cout << toString(a) << endl;
@@ -31,11 +30,26 @@ int main() {
 	double b = 1337.7331;
 	cout << toString(b) << endl;
 
-	double c = string_cast<double>("14.04");
-	cout << toString(c) << endl;
+	Date today("2017-02-11");
+	cout << toString(today) << endl;
 
-	double d = string_cast<double>("wrongstring");
-	cout << toString(d) << endl;
+	try {
+		int i = string_cast<int>("123");
+		cout << toString(i) << endl;
+
+		double d = string_cast<double>("12.34");
+		cout << toString(d) << endl;
+
+		Date date = string_cast<Date>("2015-01-10");
+		cout << toString(date) << endl;
+
+		//double d should throw invalid argument exception
+		double e = string_cast<double>("wrongstring");
+		cout << toString(e) << endl;
+
+	} catch (std::invalid_argument& e) {
+		cout << "Error: " << e.what() << endl;
+	}
 
 	return 0;
 }

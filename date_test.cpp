@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 	Date birthday("1992-01-26");
 	Date millenium("2000-01-01");
-	cout << birthday << millenium << endl;
+	cout << birthday << endl << millenium << endl;
 
 	Date today("2017-02-11");
 
