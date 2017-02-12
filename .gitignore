@@ -29,3 +29,5 @@
 *.out
 *.app
 remove_tags
+primestest
+date_test

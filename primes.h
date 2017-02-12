@@ -5,14 +5,14 @@
 
 class Primes {
 public:
-  Primes(int length);
-  void find(int number);
-  void findInterval(int start, int stop);
-  void print();
-  void printHighest();
+	Primes(int length);
+	void find(int number);
+	void findInterval(int start, int stop);
+	void print();
+	void printHighest();
 private:
-  std::string primes;
-  int length;
+	std::string primes;
+	int length;
 };
 
 #endif
