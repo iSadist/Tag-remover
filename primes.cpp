@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Primes::Primes(int length) : length(length) {
+Primes::Primes(int length) {
 	string p(length, 'P');
 	p[0] = 'C';
 	p[1] = 'C';
@@ -20,8 +20,13 @@ void Primes::find(int number) {
 
 void Primes::findInterval(int start, int stop) {
 	while (start < stop) {
-		find(start);
-		start++;
+		auto first_prime = primes.find_first_of("P",start);
+		if (first_prime < stop) {
+			find(first_prime);
+			start = first_prime + 1;
+		} else {
+			break;
+		}
 	}
 }
 

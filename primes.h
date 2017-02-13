@@ -12,7 +12,6 @@ public:
 	void printHighest();
 private:
 	std::string primes;
-	int length;
 };
 
 #endif
