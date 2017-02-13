@@ -8,7 +8,8 @@ Date::Date(std::string string) : date(string) {}
 Date::Date() {}
 
 istream& operator>>(istream& is, Date& d) {
-	regex date_format("^\\d{4}\\-\\d{2}\\-\\d{2}$");
+	regex date_format("^\\d{4}\\-((0[1-9])|(1[0-2]))\\-(0[1-9]|[1-2][0-9]|3[0-1])$");
+
 	string input;
 	is >> input;
 	if (regex_match(input, date_format)) {
@@ -21,7 +22,7 @@ istream& operator>>(istream& is, Date& d) {
 }
 
 ostream& operator<<(ostream& os, Date& d) {
-	regex date_format("^\\d{4}\\-\\d{2}\\-\\d{2}$");
+	regex date_format("^\\d{4}\\-((0[1-9])|(1[0-2]))\\-(0[1-9]|[1-2][0-9]|3[0-1])$");
 
 	if (regex_match(d.date, date_format)) {
 		std::cout << "Valid output" << '\n';
